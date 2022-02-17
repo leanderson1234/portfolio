@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Projetos from './routes/projetos'
+import { BrowserRouter,
+  Routes,
+  Route,
+   } 
+  from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+   <Routes>
+    <Route path="/" element={<App />} >
+      <Route path="projetos-web" element={<Projetos type="web" />} />
+      <Route path="projetos-mobile" element={<Projetos type="mobile" />} />
+    </Route>
+    {/* <Route path="invoices" element={<Invoices />} /> */}
+   </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
