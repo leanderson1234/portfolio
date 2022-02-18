@@ -52,7 +52,7 @@ const Navigation = styled.nav`
 `;
 
 const TitleSection = styled.h2`
-  color: #fff;
+  color: #082032;
 `;
 const Footer = styled.footer`
   display: flex;
