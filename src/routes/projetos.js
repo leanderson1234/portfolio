@@ -45,10 +45,15 @@ const ProjetoTitle = styled.h2`
   opacity: 0;
 `
 
-const ImagemProjeto = styled.img`
-  width: 300px;
-  height: 300px;
+const ImagemProjeto = styled.div`
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
+  background: no-repeat url(${({image})=> image});
+  background-size: cover;
+  background-position: center right;
+  z-index: -1;
+  
 `
 
 const ProjetoButton = styled.a`
@@ -77,8 +82,7 @@ const Projetos = ({type})=>{
               if(type == 'web'){
                 return(
                   <Projeto key={projects.id}>
-                    <span>{projects.type}</span>
-                    <ImagemProjeto src={projects.image} alt={projects.alt} />
+                    <ImagemProjeto loading="lazy" image={projects.image}/>
                     <ProjetoTitle>{projects.title}</ProjetoTitle>
                     <ProjetoButton href={projects.url} target="_blank">Abrir site</ProjetoButton>
                   </Projeto>
@@ -87,8 +91,7 @@ const Projetos = ({type})=>{
               if(type == 'mobile'){
                 return(
                   <Projeto key={projects.id}>
-                    <span>{projects.type}</span>
-                    <ImagemProjeto src={projects.image} alt={projects.alt} />
+                    <ImagemProjeto loading="lazy" image={projects.image}/>
                     <ProjetoTitle>{projects.title}</ProjetoTitle>
                     <ProjetoButton href={projects.url} target="_blank">Abrir site</ProjetoButton>
                   </Projeto>

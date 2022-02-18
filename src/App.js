@@ -36,6 +36,7 @@ const Nome = styled.h1`
 `
 const Wrapper = styled.section`
 padding: min(50px,4vw);
+height:100vh;
 `
 const Navigation = styled.nav`
   margin-top: 24px;
@@ -46,16 +47,18 @@ const Navigation = styled.nav`
   text-decoration: none;
   padding:8px 24px;
   width: 50px;
-  border:1px solid #082032;
+  border:1px solid #334756;
   border-radius: 10px;
-  color: #082032;
+  color: #FF4C29;
 }
 a:hover{
   background: #FF4C29;
-  color: #fff;
+  color: #334756;
 }
 `
-
+const TitleSection = styled.h2`
+color: #fff;
+`
 
 function App() {
   
@@ -67,9 +70,9 @@ function App() {
         </CardName>
       </Header>
         <Wrapper>
-          <h2>Projetos</h2>
+          <TitleSection>Projetos</TitleSection>
           <Navigation >
-            <Link to="/projetos-web">Web</Link>
+            <Link to="/projetos-web"  >Web</Link>
             <Link to="/projetos-mobile">Mobile</Link>
             <Outlet/>
           </Navigation>

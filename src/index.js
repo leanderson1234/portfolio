@@ -13,7 +13,8 @@ ReactDOM.render(
   <BrowserRouter>
    <Routes>
     <Route path="/" element={<App />} >
-      <Route path="projetos-web" element={<Projetos type="web" />} />
+      <Route  index element={<Projetos type="web" />} />
+      <Route  path="projetos-web" element={<Projetos type="web" />} />
       <Route path="projetos-mobile" element={<Projetos type="mobile" />} />
     </Route>
     {/* <Route path="invoices" element={<Invoices />} /> */}
