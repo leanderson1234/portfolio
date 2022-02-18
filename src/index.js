@@ -1,26 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Projetos from './routes/projetos'
-import { BrowserRouter,
-  Routes,
-  Route,
-   } 
-  from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Projetos from "./routes/projetos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter>
-   <Routes>
-    <Route path="/" element={<App />} >
-      <Route  index element={<Projetos type="web" />} />
-      <Route  path="projetos-web" element={<Projetos type="web" />} />
-      <Route path="projetos-mobile" element={<Projetos type="mobile" />} />
-    </Route>
-    {/* <Route path="invoices" element={<Invoices />} /> */}
-   </Routes>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Projetos type="web" />} />
+        <Route path="projetos-web" element={<Projetos type="web" />} />
+        <Route path="projetos-mobile" element={<Projetos type="mobile" />} />
+      </Route>
+      {/* <Route path="invoices" element={<Invoices />} /> */}
+    </Routes>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
