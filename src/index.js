@@ -6,7 +6,7 @@ import Projetos from "./routes/projetos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter basename="/">
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Projetos type="web" />} />
