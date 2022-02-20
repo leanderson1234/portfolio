@@ -64,6 +64,9 @@ const ContainerAbout = styled.section`
 
 const TextAbout = styled.p`
   width: max(400px, 48vw);
+  span {
+    font-weight: bold;
+  }
 `;
 
 const ImageAbout = styled.img`
@@ -146,7 +149,7 @@ function App() {
               Olá, me Chamo <span>Leanderson de Oliveira Santana</span>, sou
               desenvolvedor desde 2019 amo criar soluções utilizando as
               tecnologias mais atuais do mercado.Minha stack de tecnologias
-              estão logo abaixo =D
+              estão logo abaixo.
             </TextAbout>
             <ListaContainer show={show.toggle}>
               <TagTech>
