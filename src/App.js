@@ -58,12 +58,22 @@ const TitleSection = styled.h2`
 const ContainerAbout = styled.section`
   margin-top: 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: start;
+  > div {
+    max-width: 50%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    > img {
+      margin-bottom: 16px;
+    }
+  }
 `;
 
 const TextAbout = styled.p`
-  width: max(400px, 48vw);
+  width: max(300px, 48vw);
   span {
     font-weight: bold;
   }
@@ -71,6 +81,7 @@ const TextAbout = styled.p`
 
 const ImageAbout = styled.img`
   border-radius: 8px;
+  width: 300px;
 `;
 
 const Footer = styled.footer`
@@ -118,7 +129,7 @@ const TagTech = styled.div`
   border-radius: 8px;
   width: fit-content;
   margin-right: 8px;
-  min-width: 178px;
+  max-width: 172px;
 `;
 
 function App() {
