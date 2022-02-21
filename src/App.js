@@ -1,10 +1,13 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { css } from "styled-components";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import { CustomLink } from "./components/custonLink";
 import { FormEmail } from "./components/formEmail";
 import { useState, useEffect } from "react";
+import { colors, slash, toggle } from "./keyframes";
+
 const Header = styled.header`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,24 +23,15 @@ const Header = styled.header`
   );
   backdrop-filter: blur(8px);
   background-size: 300% 300%;
-  animation: colors 15s ease infinite;
-
-  @keyframes colors {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  animation: ${colors} 8s ease infinite;
 `;
+
 const CardName = styled.div`
   border: 1px solid #fff;
   width: max-content;
   border-radius: 8px;
+
+  animation: ${slash} 3s ease;
 `;
 const Nome = styled.h1`
   padding: 24px;
@@ -45,17 +39,28 @@ const Nome = styled.h1`
 `;
 const Wrapper = styled.section`
   padding: min(50px, 4vw);
-  min-height: 100vh;
+  position: relative;
+  text-align: center;
 `;
 const Navigation = styled.nav`
   margin-top: 24px;
   margin-bottom: 24px;
+  @media (max-width: 768px) {
+    > #contact {
+      display: none;
+    }
+    > main {
+      justify-content: center;
+    }
+  }
 `;
 
 const TitleSection = styled.h2`
   color: #082032;
 `;
 const ContainerAbout = styled.section`
+  position: relative;
+  height: 90vh;
   margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
@@ -63,17 +68,28 @@ const ContainerAbout = styled.section`
   align-items: start;
   > div {
     max-width: 50%;
+    margin-bottom: 16px;
   }
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+    height: 100%;
+    align-items: center;
+
     > img {
       margin-bottom: 16px;
+    }
+    > div {
+      max-width: 100%;
+    }
+    > a {
+      display: none;
     }
   }
 `;
 
 const TextAbout = styled.p`
-  width: max(300px, 48vw);
+  width: 100%;
+  text-align: justify;
   span {
     font-weight: bold;
   }
@@ -83,25 +99,25 @@ const ImageAbout = styled.img`
   border-radius: 8px;
   width: 300px;
 `;
+const Col = styled.div`
+  flex: 1;
+`;
 
 const Footer = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
+  height: 100vh;
   margin-bottom: 48px;
+  position: relative;
+  text-align: center;
+
+  justify-content: center;
 `;
 const FooterTitle = styled.h2`
   margin-bottom: 24px;
 `;
-const slash = keyframes`
-  from {
-  transform:translateX(-100vw);
-  }
-  to {
-    transform:translateX(0);
-  }
-`;
+
 const ListaContainer = styled.div`
   display: none;
   flex-wrap: wrap;
@@ -132,6 +148,17 @@ const TagTech = styled.div`
   max-width: 172px;
 `;
 
+const ArrowNav = styled.a`
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+  ${css`
+    animation: ${toggle} 0.8s infinite ease;
+  `}
+  > img {
+    width: 56px;
+  }
+`;
 function App() {
   const [show, setShow] = useState({ toggle: "" });
   const handleScroll = () => {
@@ -151,11 +178,14 @@ function App() {
         <CardName>
           <Nome>Leanderson Santana</Nome>
         </CardName>
+        <ArrowNav href="#about">
+          <img src={process.env.PUBLIC_URL + "/images/arrow-down-circle.svg"} />
+        </ArrowNav>
       </Header>
       <Wrapper>
-        <h2>Sobre mim</h2>
+        <h2 id="about">Sobre mim</h2>
         <ContainerAbout>
-          <div>
+          <Col>
             <TextAbout>
               Olá, me Chamo <span>Leanderson de Oliveira Santana</span>, sou
               desenvolvedor desde 2019 amo criar soluções utilizando as
@@ -213,21 +243,38 @@ function App() {
                 <span>FLUTTER</span>
               </TagTech>
             </ListaContainer>
-          </div>
-          <ImageAbout src={process.env.PUBLIC_URL + "/images/eu.jpg"} />
+          </Col>
+          <Col>
+            <ImageAbout src={process.env.PUBLIC_URL + "/images/eu.jpg"} />
+          </Col>
+          <ArrowNav href="#projects">
+            <img
+              src={process.env.PUBLIC_URL + "/images/arrow-down-circle.svg"}
+            />
+          </ArrowNav>
         </ContainerAbout>
       </Wrapper>
       <Wrapper>
-        <TitleSection>Projetos</TitleSection>
+        <TitleSection id="projects">Projetos</TitleSection>
         <Navigation>
           <CustomLink to="/projetos-web">Web</CustomLink>
           <CustomLink to="/projetos-mobile">Mobile</CustomLink>
           <Outlet />
+          <ArrowNav href="#contact" id="contact">
+            <img
+              src={process.env.PUBLIC_URL + "/images/arrow-down-circle.svg"}
+            />
+          </ArrowNav>
         </Navigation>
       </Wrapper>
       <Footer>
-        <FooterTitle>Entre em contato</FooterTitle>
+        <FooterTitle id="contact">Entre em contato</FooterTitle>
         <FormEmail />
+        <ArrowNav href="#about">
+          <img
+            src={process.env.PUBLIC_URL + "/images/arrow-up-circle-icon.svg"}
+          />
+        </ArrowNav>
       </Footer>
     </div>
   );

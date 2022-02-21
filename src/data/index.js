@@ -17,7 +17,7 @@ export const datas = [
     id: 3,
     title: "Letmeask",
     image: `${process.env.PUBLIC_URL}/images/projetos/letmeask.png`,
-    url: "letmeask-1f12f.firebaseapp.com",
+    url: "https://letmeask-1f12f.firebaseapp.com",
     type: "web",
   },
   {

@@ -203,7 +203,7 @@ export const FormEmail = () => {
       <DivIpunt>
         <TextareaMensage
           name="message"
-          placeholder="Menssagem"
+          placeholder="Mensagem "
           value={message}
           onChange={({ target }) => {
             setMessage(target.value);
