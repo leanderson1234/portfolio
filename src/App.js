@@ -14,12 +14,11 @@ const Header = styled.header`
   height: 100vh;
   background: linear-gradient(
     45deg,
-    #082032,
-    #2c394b,
+    #080501,
+    #030a1c,
     #334756,
     #ff4c29,
-    #ea5c2b,
-    #ff7f3f
+    #ea5c2b
   );
   backdrop-filter: blur(8px);
   background-size: 300% 300%;
@@ -38,6 +37,8 @@ const Nome = styled.h1`
   color: #fff;
 `;
 const Wrapper = styled.section`
+  background: linear-gradient(180deg, #030a1c, #080501);
+  color: #fff;
   padding: min(50px, 4vw);
   position: relative;
   text-align: center;
@@ -56,7 +57,7 @@ const Navigation = styled.nav`
 `;
 
 const TitleSection = styled.h2`
-  color: #082032;
+  color: #fff;
 `;
 const ContainerAbout = styled.section`
   position: relative;
@@ -104,11 +105,12 @@ const Col = styled.div`
 `;
 
 const Footer = styled.footer`
+  background: linear-gradient(180deg, #030a1c, #080501);
+  color: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  margin-bottom: 48px;
   position: relative;
   text-align: center;
 
@@ -159,6 +161,7 @@ const ArrowNav = styled.a`
     width: 56px;
   }
 `;
+
 function App() {
   const [show, setShow] = useState({ toggle: "" });
   const handleScroll = () => {

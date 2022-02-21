@@ -6,6 +6,20 @@ const ContentMain = styled.main`
   flex-wrap: wrap;
 `;
 
+const ProjetoTitle = styled.h2`
+  position: absolute;
+  color: #082032;
+  opacity: 0;
+`;
+
+const ImagemProjeto = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: no-repeat url(${({ image }) => image});
+  background-size: cover;
+  background-position: center right;
+`;
 const Projeto = styled.div`
   border: #f5f5f5 solid 1.5px;
   width: 320px;
@@ -22,6 +36,9 @@ const Projeto = styled.div`
   :hover {
     background: #ff7f3f;
     transition: ease 0.5s;
+    ${ImagemProjeto} {
+      display: none;
+    }
     h2 {
       opacity: 1;
       transition: ease 1s;
@@ -36,22 +53,6 @@ const Projeto = styled.div`
     }
   }
 `;
-const ProjetoTitle = styled.h2`
-  position: absolute;
-  color: #082032;
-  opacity: 0;
-`;
-
-const ImagemProjeto = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background: no-repeat url(${({ image }) => image});
-  background-size: cover;
-  background-position: center right;
-  z-index: -1;
-`;
-
 const ProjetoButton = styled.a`
   position: absolute;
   bottom: 20%;
