@@ -67,6 +67,10 @@ export const ContainerAbout = styled.section`
     max-width: 50%;
     margin-bottom: 16px;
   }
+  > h3 {
+    margin-top: 16px;
+    text-align: start;
+  }
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     height: 100%;
@@ -156,5 +160,20 @@ export const ArrowNav = styled.a`
   `}
   > img {
     width: 56px;
+  }
+`;
+
+export const ContainerSocial = styled.div`
+  background: #fff;
+  box-shadow: rgb(100 100 111 / 62%) 0px 7px 29px 0px;
+  padding: 8px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-left: 16px;
+  width: max-content;
+  img {
+    height: 50px;
+    margin-right: 16px;
   }
 `;

@@ -14,6 +14,7 @@ import {
   TextAbout,
   TitleSection,
   Wrapper,
+  ContainerSocial,
 } from "./App.styles";
 import { Outlet } from "react-router-dom";
 import { CustomLink } from "./components/custonLink";
@@ -51,11 +52,29 @@ function App() {
         <ContainerAbout>
           <Col>
             <TextAbout>
-              Olá, me Chamo <span>Leanderson de Oliveira Santana</span>, sou
+              Olá, me chamo <span>Leanderson de Oliveira Santana</span>, sou
               desenvolvedor desde 2019 amo criar soluções utilizando as
-              tecnologias mais atuais do mercado.Minha stack de tecnologias
-              estão logo abaixo.
+              tecnologias mais atuais do mercado. Minhas redes sociais logo
+              abaixo
             </TextAbout>
+            <ContainerSocial>
+              <a
+                href="https://www.linkedin.com/in/leanderson-santana-1227a7122/"
+                target="_blank"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/images/icone-linkedin.svg"}
+                  alt="linkedin"
+                />
+              </a>
+              <a href="https://github.com/leanderson1234" target="_blank">
+                <img
+                  src={process.env.PUBLIC_URL + "/images/GitHub-Mark-64px.png"}
+                  alt="github"
+                />
+              </a>
+            </ContainerSocial>
+            <h3>Stack de tecnologias:</h3>
             <ListaContainer show={show.toggle}>
               <TagTech>
                 <img
@@ -114,13 +133,13 @@ function App() {
               alt="foto do rosto de Leanderson Santana"
             />
           </Col>
-          <ArrowNav href="#projects">
-            <img
-              src={process.env.PUBLIC_URL + "/images/arrow-down-circle.svg"}
-              alt="seta de navegação para baixo"
-            />
-          </ArrowNav>
         </ContainerAbout>
+        <ArrowNav href="#projects">
+          <img
+            src={process.env.PUBLIC_URL + "/images/arrow-down-circle.svg"}
+            alt="seta de navegação para baixo"
+          />
+        </ArrowNav>
       </Wrapper>
       <Wrapper>
         <TitleSection id="projects">Projetos</TitleSection>

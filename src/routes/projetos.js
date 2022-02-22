@@ -1,6 +1,6 @@
 import { datas } from "../data";
 import styled from "styled-components";
-
+import { rotateY } from "../keyframes";
 const ContentMain = styled.main`
   display: flex;
   flex-wrap: wrap;

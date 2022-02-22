@@ -29,3 +29,11 @@ export const toggle = keyframes`
     opacity: 0;
   }
 `;
+export const rotateY = keyframes`
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+`;
