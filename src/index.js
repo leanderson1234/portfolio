@@ -4,9 +4,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Projetos from "./routes/projetos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalStyle from "./GlobalStyle";
 
 ReactDOM.render(
   <BrowserRouter>
+    <GlobalStyle />
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Projetos type="web" />} />
