@@ -31,8 +31,9 @@ export const Nome = styled.h1`
   padding: 24px;
   color: #fff;
 `;
+// background: linear-gradient(180deg, #030a1c, #080501);
 export const Wrapper = styled.section`
-  background: linear-gradient(180deg, #030a1c, #080501);
+  box-shadow: rgb(13 8 44 / 66%) 0px 5px;
   color: #fff;
   padding: min(50px, 4vw);
   position: relative;
@@ -99,8 +100,9 @@ export const Col = styled.div`
   flex: 1;
 `;
 
+// background: linear-gradient(180deg, #030a1c, #080501);
 export const Footer = styled.footer`
-  background: linear-gradient(180deg, #030a1c, #080501);
+  box-shadow: rgb(13 8 44 / 66%) 0px 5px;
   color: #fff;
   display: flex;
   align-items: center;
