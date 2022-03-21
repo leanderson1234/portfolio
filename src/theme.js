@@ -1,0 +1,76 @@
+export const theme = {
+  color: {
+    primary_dark: "#1E45A8",
+    primary_light: "#4576F4",
+    secondary: "#F5795D",
+    secondary_dark: "#943209",
+    tertiary: "#A6F52C",
+    tertiary_dark: "#76A827",
+    text_primary: "#383B42",
+    text_primary_dark: "#060E23",
+    text_primary_light: "#F4F4F6",
+    danger: "#DC1616",
+  },
+  text_config: {
+    desktop: {
+      h1: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "bold",
+        font_size: "48px",
+        line_height: "110%",
+      },
+      h2: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "600",
+        font_size: "36px",
+        line_height: "110%",
+      },
+      h3: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "500",
+        font_size: "32px",
+        line_height: "110%",
+      },
+      text: {
+        font_family: "Roboto",
+        font_style: "normal",
+        font_weight: "normal",
+        font_size: "24px",
+        line_height: "150%",
+      },
+    },
+    mobile: {
+      h1: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "bold",
+        font_size: "36px",
+        line_height: "110%",
+      },
+      h2: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "600",
+        font_size: "32px",
+        line_height: "110%",
+      },
+      h3: {
+        font_family: "Baloo 2",
+        font_style: "normal",
+        font_weight: "500",
+        font_size: "24px",
+        line_height: "110%",
+      },
+      text: {
+        font_family: "Roboto",
+        font_style: "normal",
+        font_weight: "normal",
+        font_size: "16px",
+        line_height: "150%",
+      },
+    },
+  },
+};
