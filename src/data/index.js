@@ -6,7 +6,7 @@ export const datas = [
     url: "https://desafio-easybank-2-a4g4fu2it-leanderson1234.vercel.app/",
     type: "web",
     description:
-      "Easybank landing page, desafio proposto do site frontendmentor.io foi utilizado Semantic HTML5, CSS, custom properties Flexbox, CSS Grid, Mobile-first, workflow React - JS, library Styled Components - para styles, Material-ui - para components. Uma pagina estática utilizado para promover os serviços do banco",
+      "Easybank landing page, desafio proposto do site frontendmentor.io foi utilizado Semantic HTML5, CSS, custom properties Flexbox, CSS Grid, Mobile-first, workflow React - JS, library Styled Components - para styles, Material-ui - para components. Uma página estática utilizado para promover os serviços do banco",
   },
   {
     id: 2,

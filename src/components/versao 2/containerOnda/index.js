@@ -70,8 +70,8 @@ export const ContainerOnda = () => {
       <Wrapper id="sobre">
         <Title>Sobre</Title>
         <p>
-          Sou desenvolvedor desde 2019 onde trabalhei em uma das maiores startap
-          de salvador, onde aprende diversas tecnologias e me apaixonei por
+          Sou desenvolvedor desde 2019 onde trabalhei em uma das maiores startup
+          de salvador, onde aprendi diversas tecnologias e me apaixonei por
           front end
         </p>
         <Subtitle>Tecnologias utilizadas</Subtitle>

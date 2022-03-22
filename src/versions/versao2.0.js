@@ -45,7 +45,7 @@ export const Versao2 = () => {
           </LinkMenu>
           <LinkMenu>
             <LinkItem href="#servicos" onClick={handleMenu}>
-              SERVIÇOES
+              SERVIÇOS
             </LinkItem>
           </LinkMenu>
           <LinkMenu>
